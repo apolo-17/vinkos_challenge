@@ -13,10 +13,9 @@ return new class extends Migration
     {
         Schema::create('visitors', function (Blueprint $table) {
             $table->id();
-            $table->id();
             $table->string('email')->unique();
-            $table->date('fecha_primera_visita')->nullable();
-            $table->date('fecha_ultima_visita')->nullable();
+            $table->dateTime('fecha_primera_visita')->nullable();
+            $table->dateTime('fecha_ultima_visita')->nullable();
             $table->integer('visitas_totales')->default(0);
             $table->integer('visitas_anio_actual')->default(0);
             $table->integer('visitas_mes_actual')->default(0);
