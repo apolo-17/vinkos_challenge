@@ -29,6 +29,8 @@ return new class extends Migration
             $table->string('navegadores')->nullable();
             $table->string('plataformas')->nullable();
 
+            $table->string('file_name');
+
             $table->foreign('email')->references('email')->on('visitors')->onDelete('cascade');
             $table->timestamps();
         });

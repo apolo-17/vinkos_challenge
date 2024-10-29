@@ -24,7 +24,8 @@ class Statistic extends Model
         'links',
         'ips',
         'navegadores',
-        'plataformas'
+        'plataformas',
+        'file_name'
     ];
 
     public function visitor()

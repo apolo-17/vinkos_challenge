@@ -40,7 +40,7 @@ return [
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
-            'url' => env('APP_URL').'/storage',
+            'url' => env('APP_URL') . '/storage',
             'visibility' => 'public',
             'throw' => false,
         ],
@@ -55,6 +55,16 @@ return [
             'endpoint' => env('AWS_ENDPOINT'),
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
             'throw' => false,
+        ],
+
+        'sftp' => [
+            'driver' => 'sftp',
+            'host' => env('SFTP_HOST', 'sftp.example.com'), // Cambia al host de tu servidor SFTP
+            'username' => env('SFTP_USERNAME', 'username'), // Cambia al usuario de tu servidor SFTP
+            'password' => env('SFTP_PASSWORD', 'password'), // Cambia a la contraseña de tu servidor SFTP
+            'port' => env('SFTP_PORT', 22), // Cambia al puerto de tu servidor SFTP si no es el predeterminado
+            'root' => env('SFTP_ROOT', '/remote/path/to/documents'), // Directorio raíz del SFTP, si aplica
+            'timeout' => 60, // Opcional: tiempo de espera de conexión
         ],
 
     ],

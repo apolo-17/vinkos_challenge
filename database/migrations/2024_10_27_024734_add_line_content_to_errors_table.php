@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::table('errors', function (Blueprint $table) {
             $table->text('line_content')->nullable(); // O el tipo que necesites
+            $table->string('file_name')->nullable();
         });
     }
 
@@ -23,6 +24,7 @@ return new class extends Migration
     {
         Schema::table('errors', function (Blueprint $table) {
             $table->dropColumn('line_content');
+            $table->dropColumn('file_name');
         });
     }
 };

@@ -12,6 +12,7 @@ class Error extends Model
     protected $fillable = [
         'email',
         'error_description',
-        'registro'
+        'registro',
+        'file_name'
     ];
 }
